@@ -42,8 +42,8 @@ Make sure you have sufficient hardware resources if working with large models su
 First, clone this repository to your local machine:
 
 ```bash
-git clone https://your-repository-url.git
-cd your-repository
+git clone git@github.com:otaviosoaresp/rag_bot_ollama.git
+cd rag_bot_ollama
 ```
 
 ### 2. Create a virtual environment
@@ -101,19 +101,7 @@ MODELS = {
 }
 ```
 
-Make sure you have downloaded and placed the models in the correct directory accessible by the **Ollama API**.
-
-### 2. Set up the Environment
-
-You'll need an `.env` file to configure some environment variables, especially if you are using **Ollama** with local models. Set up the environment variables as necessary:
-
-```env
-OLLAMA_API_KEY=your_ollama_api_key
-```
-
-You can set other variables related to your environment such as paths to the model files if needed.
-
-### 3. Data Loading
+### 2. Data Loading
 
 Place the files (e.g., `.txt`, `.pdf`, `.csv`, `.xlsx`) you want to load into the folder `/cerebro`. The project will read all files from this directory, process them, and index the contents into Qdrant for vector search.
 
